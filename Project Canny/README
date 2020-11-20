@@ -1,0 +1,89 @@
+
+Project has two segments. 
+
+Canny Edge Detector :
+
+its a simple canny detector with static threshold. 
+
+File, cannyEdge.py: 
+
+CMD : python3 cannyEdge.py
+
+Configuration before execution: 
+
+=> Update folder path variable in main. Variable name "folder". Static constants are in the file constants.py
+
+	Static constants include:
+	1) Filters 
+		SOBEL_X
+		SOBEL_Y
+
+	2) Gaussian Params
+		GAUSSIAN_MEAN
+		GAUSSIAN_VAR
+
+	3) DIVIDE_EPSILON, to prevent division by zero
+
+	4) HIGHER_THRESHOLD, LOWER_THRESHOLD 
+
+
+
+Challenges: 
+
+Note: As discussed with the TA, I also implemented the previous year challenges. As they were mentioned in the canvas. Even i have implemented it for videos.
+
+Video Challenge:
+
+CMD: python3 video.py {videoPath}
+
+output is saved in challenge_results folder.
+
+
+
+Last Year Challenge: 
+
+All challenges given are implemented. There is single file which executes all the challenges. It takes sys arguments. 
+
+File, challenges.py:
+
+CMD : python3 challenges.py {threshold} {lineMap} {colorMap}
+
+threshold can take values : "L", "G", "S"
+
+"S" computes the canny using static thresholds from constants.py file. 
+"G" computes the canny using Automatic threshold calculator for entire image.
+"L" computes the canny using Automatic threshold calculator for every window of size STRIDE_ROW X STRIDE_COL.
+
+lineMap can take values: "L", "N"
+
+"L": it computes the line map. Use LINE_INFORMATION_LIMIT variable in constants.py to limit number of lines to include.
+
+"N" it computes the edgeMap.
+
+colorMap can take values "C", "N"
+
+"C" generates colormap output. "N" generates grayscale image 
+
+
+
+
+Global Threshold : 
+
+Implemented this paper : "CANNYLINES: A PARAMETER-FREE LINE SEGMENT DETECTOR", Xiaohu Lu, Jian Yao†, Kai Li, and Li Li
+PDF: http://cvrs.whu.edu.cn/projects/cannyLines/papers/CannyLines-ICIP2015.pdf
+
+For Local Threshold, 
+Implemented the above paper, but tweaked how the HIGHER_THRESHOLD is selected.(Limiting on information content based on mean and varience). 
+
+
+This is a additional constraint used. 
+
+information in local part should be  <= p(mean_of_local_part) * total information
+
+where p is the probability. it is gaussian function, whose mean is mean of image, and variance is variance of image. 
+
+Implementation : check "getThreshold" function in "helper.py". 
+
+
+For Color Map, Used edge detection on different channels and combined them into single edge map.
+

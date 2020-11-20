@@ -1,0 +1,21 @@
+
+
+Wrapper.py has code to execute 
+
+Change the sourceImage and destinationImage. 
+
+plot the points. 
+
+Make sure the size of the images are of same size. 
+
+change the output file name, where the gif is stored.
+(change the length of the span if necessary)
+
+ 
+morph_1.gif is a demo with cat and tiger. 
+
+morph_2.gif is a demo with face morphing "Leo and Sachin"
+
+
+
+

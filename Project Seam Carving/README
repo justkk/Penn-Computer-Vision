@@ -1,0 +1,59 @@
+
+
+
+Commands to Execute:
+
+1. python3 makeVerticalVideo.py 
+
+(only for vertical removal) 
+
+Video of vertical seam removal
+
+Before running the command, Change the input image path and the output video path. Change nc for testing different checks. nr has to be zero. This code is for vertical seam removal. 
+
+2. python3 makeHorzVideo.py 
+
+(only for Horz removal) 
+
+Video of Horz seam removal
+
+
+Before running the command, Change the input image path and the output video path. Change nr for testing different checks. nc has to be zero. This code is for Horz seam removal. 
+
+
+
+3. python3 makeFullVideo.py 
+
+(removes both horizontal and vertical) 
+
+Video of both seam removal
+
+
+Before running the command, Change the input image path and the output video path. Change nr and nc for testing different checks. 
+
+
+4. python3 testRun.py 
+
+("Only outputs image")
+
+Given Image and nr,nc it computes the carv.py and outputs the image. 
+
+Before running the command, Change the input image path, nr, nc values. OutImage will be displayed. 
+
+
+
+### Challenges 
+
+5. python3 seam_video.py {videoName}
+
+ex: python3 seam_video.py SampleVideo_640x360_1mb.mp4
+
+This generates the output challenge_results_SampleVideo_640x360_1mb.avi 
+
+
+change the output file name in the code (if required). Change nr and nc if required.  
+
+
+
+
+

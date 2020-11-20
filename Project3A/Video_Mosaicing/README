@@ -1,0 +1,66 @@
+
+
+
+command to execute: 
+
+Constants.py have the constants used for thresholding. 
+
+Command 1: 
+
+python3 wrapper.py I O 1.0
+
+Before running the above command, 
+
+change the variable: centerImage, iarray. 
+
+where centerImage contains the PIL.Image object of center image. 
+
+iarray has the image objects of PIL.Image, but make sure the order is maintained. 
+
+ 
+
+where 
+
+First argument: 
+I => use oriented feature discriptor
+S => use SIFT features
+
+We have implemented geometric transform that mimic cv2.wrapPerspective(), but we parameterized which one to use based on parameters. 
+
+Second argument
+
+O => use open cv transformation 
+I => use implemented geometric transform
+
+All the examples mentioned in the pdf are from "implemented geometric transform"
+
+Third Argument
+
+resize fraction 
+
+range => 0.0 to 1.0 
+
+Command 2: 
+
+This the wrapper call for mymosaic. 
+
+command: python3 wrapper2.py
+
+update the array in iarray with new image objects. 
+
+middle Image will the center image. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
